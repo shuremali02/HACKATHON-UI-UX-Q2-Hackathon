@@ -1,14 +1,15 @@
+import Image from 'next/image';
 import React from 'react';
 
 function ProductPage() {
   return (
     <div className="product-container">
       <div className="product-image">
-        <img src="t-shirt-image.jpg" alt="One Life Graphic T-Shirt" />
+        <Image src="t-shirt-image.jpg" alt="One Life Graphic T-Shirt" width={444} height={530}/>
         <div className="product-images">
-          <img src="t-shirt-image2.jpg" alt="T-Shirt Image 2" />
-          <img src="t-shirt-image3.jpg" alt="T-Shirt Image 3" />
-          <img src="t-shirt-model.jpg" alt="Model Wearing T-Shirt" />
+          <Image src="t-shirt-image2.jpg" alt="T-Shirt Image 2" width={152} height={167}/>
+          <Image src="t-shirt-image3.jpg" alt="T-Shirt Image 3" width={152} height={167} />
+          <Image src="t-shirt-model.jpg" alt="Model Wearing T-Shirt" width={152} height={167} />
         </div>
       </div>
 

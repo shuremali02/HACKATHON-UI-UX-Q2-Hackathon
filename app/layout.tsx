@@ -34,6 +34,7 @@ export default function RootLayout({
         <TopSec/>
         <Header/>
         {children}
+        <Footer/>
        
       </body>
     </html>

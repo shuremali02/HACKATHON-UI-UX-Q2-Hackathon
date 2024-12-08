@@ -10,7 +10,9 @@ export default function Header() {
     <div className="bg-bg flex items-center justify-between px-4 md:px-8 lg:px-16">
       {/* Logo Section */}
       <div className="flex items-center">
-        <h1 className="font-serif text-[24px] lg:text-[32px]">Shop . Co</h1>
+        <h1 className="font-serif text-[24px] lg:text-[32px]"> 
+          <Image src={"/images/SHOP.CO.sv"} alt="Logo"width={160} height={22}/>
+        </h1>
       </div>
 
       {/* Navigation Links */}

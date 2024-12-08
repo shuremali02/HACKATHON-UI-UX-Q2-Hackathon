@@ -1,12 +1,10 @@
 import React from 'react';
-import Link from 'next/link';
+
 import Image from 'next/image';
-import { FaFacebookF, FaInstagram, FaRegCopyright } from "react-icons/fa";
+import { FaFacebookF, FaInstagram,  } from "react-icons/fa";
 import { CiTwitter } from "react-icons/ci";
 import { TiSocialLinkedin } from "react-icons/ti";
-import { VscSend } from "react-icons/vsc";
-import { Input } from "@/components/ui/input";
-import { cn } from '@/lib/utils';
+
 import { Button } from '@/components/ui/button';
 
 export default function Footer() {
@@ -52,7 +50,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center md:text-left">
           <div>
             <h3 className="font-semibold text-lg mb-4">Shop.Co</h3>
-            <p className="text-sm">We have clothes that suit your style and which you're proud to wear. From women to men.</p>
+            <p className="text-sm">We have clothes that suit your style and which you&#39;re proud to wear. From women to men.</p>
             <div className="flex justify-center md:justify-start mt-4 space-x-4 text-xl">
               <FaFacebookF />
               <CiTwitter />

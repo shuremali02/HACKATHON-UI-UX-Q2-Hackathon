@@ -1,26 +1,5 @@
-// import React from 'react';
 
-// interface Carts {
-//     image:string,
-//     title:string,
-//     describtion:string,
-//     price:number,
-// }
-
-// export default function CartCards({image,title,describtion,price}:Carts) {
-//   return (
-//    <div className='flex justify-between'>
-//     <div className='flex'>
-//         <div >Image</div>
-//         <div>text</div>
-//     </div>
-//     <div>
-//         <p>delete</p>
-//         <p>count</p>
-//     </div>
-//    </div>
-//   )
-// }
+import Image from 'next/image';
 import React from 'react';
 
 interface Carts {
@@ -50,7 +29,7 @@ export default function CartCards({
       <div className="flex items-start gap-4">
         {/* Product Image */}
         <div className="w-20 h-20 bg-gray-300 flex justify-center items-center rounded-lg overflow-hidden">
-          <img src={image} alt={title} className="object-cover w-full h-full" />
+          <Image src={image} alt={title} className="object-cover w-full h-full" />
         </div>
         {/* Text Details */}
         <div>

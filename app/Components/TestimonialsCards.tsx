@@ -31,7 +31,7 @@ export default function TestimonialsCard({
         {/* Description */}
         <div className="w-full">
           <p className="text-gray-600 text-sm break-words">
-            "{description}"
+            {description}
           </p>
         </div>
       </div>
