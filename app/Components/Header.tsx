@@ -11,7 +11,7 @@ export default function Header() {
       {/* Logo Section */}
       <div className="flex items-center">
         <h1 className="font-serif text-[24px] lg:text-[32px]"> 
-          <Image src={"/images/SHOP.CO.sv"} alt="Logo"width={160} height={22}/>
+          <Image src={"/images/SHOP.CO.svg"} alt="Logo"width={160} height={22}/>
         </h1>
       </div>
 
