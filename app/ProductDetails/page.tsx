@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ProductTestimonial from "../Components/ProductTestimonials";
 
 export default function ProductDetails() {
   return (
@@ -8,48 +9,50 @@ export default function ProductDetails() {
         Home &gt; Shop &gt; Men &gt; T-Shirts
       </nav>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Product Images */}
-        <div className="space-y-4">
-          <div className="w-full rounded-lg overflow-hidden shadow-md">
+      {/* Main Section */}
+      <div className="flex flex-col lg:flex-row gap-8">
+        {/* Left Section: Product Images */}
+        <div className="lg:w-1/2 flex gap-4">
+          {/* Thumbnails */}
+          <div className="flex flex-col space-y-4">
             <Image
-              src="/images/tshirt-main.jpg" /* Replace with your image URL */
-              alt="ONE LIFE GRAPHIC T-SHIRT"
-              width={800} /* Adjust width */
-              height={600} /* Adjust height */
-              layout="responsive"
-              className="w-full object-cover"
+              src="/images/ProDetail1-2.svg"
+              alt="Thumbnail 1"
+              width={152}
+              height={167}
+              className=" rounded-lg cursor-pointer border border-gray-300 hover:border-black"
+            />
+            <Image
+              src="/images/ProDetail3.svg"
+              alt="Thumbnail 2"
+              width={152}
+              height={167}
+              className=" rounded-lg cursor-pointer border border-gray-300 hover:border-black"
+            />
+            <Image
+              src="/images/ProDetail4.svg"
+              alt="Thumbnail 3"
+              width={152}
+              height={167}
+              className=" rounded-lg cursor-pointer border border-gray-300 hover:border-black"
             />
           </div>
 
-          {/* Thumbnail Images */}
-          <div className="flex space-x-4">
+          {/* Main Image */}
+          <div className=" rounded-lg overflow-hidden">
             <Image
-              src="/images/tshirt-side1.jpg" /* Replace with your image URL */
-              alt="Thumbnail 1"
-              width={200} /* Adjust size */
-              height={200}
-              className="w-1/4 rounded-lg cursor-pointer border border-gray-300 hover:border-black"
-            />
-            <Image
-              src="/images/tshirt-side2.jpg"
-              alt="Thumbnail 2"
-              width={200}
-              height={200}
-              className="w-1/4 rounded-lg cursor-pointer border border-gray-300 hover:border-black"
-            />
-            <Image
-              src="/images/tshirt-model.jpg"
-              alt="Model"
-              width={200}
-              height={200}
-              className="w-1/4 rounded-lg cursor-pointer border border-gray-300 hover:border-black"
+              src="/images/ProDetail1-2.svg"
+              alt="Main Product Image"
+              width={454}
+              height={530}
+             layout="responsive"
+              className="w-full object-cover"
             />
           </div>
         </div>
 
-        {/* Product Details */}
-        <div>
+        {/* Right Section: Product Details */}
+        <div className="lg:w-1/2">
           <h1 className="text-3xl font-bold mb-4">ONE LIFE GRAPHIC T-SHIRT</h1>
 
           {/* Ratings */}
@@ -119,6 +122,9 @@ export default function ProductDetails() {
             Add to Cart
           </button>
         </div>
+      </div>
+      <div>
+        <ProductTestimonial/>
       </div>
     </div>
   );

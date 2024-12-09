@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import React from 'react';
 
@@ -38,7 +39,7 @@ function ProductPage() {
           <button className="increase">+</button>
         </div>
 
-        <button className="add-to-cart">Add to Cart</button>
+        <Button className="add-to-cart">Add to Cart</Button>
       </div>
 
       {/* ... rest of the product details, ratings, and FAQs sections ... */}

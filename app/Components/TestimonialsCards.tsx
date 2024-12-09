@@ -6,11 +6,13 @@ export interface TestimonialsProp {
 
   description: string;
   name: string;
+  title?:string
 }
 
 export default function TestimonialsCard({
   description,
   name,
+  title,
 }: TestimonialsProp) {
   return (
     <div className="flex justify-center items-center">
@@ -34,6 +36,9 @@ export default function TestimonialsCard({
             {description}
           </p>
         </div>
+        <div className="w-full"><p className="text-gray-600 text-sm break-words">
+            {description}
+          </p></div>
       </div>
     </div>
   );
