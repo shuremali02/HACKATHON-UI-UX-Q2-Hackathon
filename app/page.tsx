@@ -14,15 +14,15 @@ export default function HomePage() {
   return (
     <div>
 
-      {/* <HeroSecBanner /> */}
-      {/* Brand Logos Section */}
-      {/* <div className="">
+      <HeroSecBanner />
+
+       <div className="">
         <LogoSec />
       </div>
       <NewArrivals />
       <TopSelling />
       <CategoryBanner/>
-      <Testimonial /> */}
+      <Testimonial />
     
 
     </div>
