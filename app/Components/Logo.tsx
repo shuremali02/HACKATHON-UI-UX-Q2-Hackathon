@@ -38,15 +38,15 @@ import Image from 'next/image';
 
 export default function LogoSec() {
   return (
-    <div className="flex items-center justify-center bg-black py-4">
-      <div className="w-full max-w-[1280px] flex flex-wrap items-center justify-between px-4">
+    <div className="flex items-center justify-center bg-black py-11">
+      <div className="w-full flex flex-wrap items-center justify-between px-4">
         {/* Logo container */}
         {[
-          { src: "/images/versace.svg", alt: "Versace", width: 123, height: 38 },
+          { src: "/images/versace.svg", alt: "Versace", width: 130, height: 43 },
           { src: "/images/zara-logo.svg", alt: "Zara", width: 88, height: 28 },
-          { src: "/images/gucci-logo.svg", alt: "Gucci", width: 123, height: 38 },
-          { src: "/images/prada-logo.svg", alt: "Prada", width: 123, height: 38 },
-          { src: "/images/calvine.svg", alt: "Calvin", width: 123, height: 38 },
+          { src: "/images/gucci-logo.svg", alt: "Gucci", width: 130, height: 43 },
+          { src: "/images/prada-logo.svg", alt: "Prada", width: 194, height: 3 },
+          { src: "/images/calvine.svg", alt: "Calvin", width: 130, height: 43 },
         ].map((logo, index) => (
           <div
             key={index}

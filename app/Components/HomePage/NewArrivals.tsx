@@ -38,7 +38,7 @@ const Products: ProductCards[] = [
 ];
   return (
 
-    <div className='flex flex-col w-full space-y-4  justify-center'>
+    <div className='flex flex-col w-full space-y-4 py-4 pt-11  justify-center'>
         <div className=''>
             <h1 className='font-bold text-5xl text-center'>NEW ARRIVALS</h1>
         </div>
