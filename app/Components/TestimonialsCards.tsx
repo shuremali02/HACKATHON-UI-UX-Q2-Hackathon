@@ -12,7 +12,7 @@ export interface TestimonialsProp {
 export default function TestimonialsCard({
   description,
   name,
-  title,
+  
 }: TestimonialsProp) {
   return (
     <div className="flex justify-center items-center">
