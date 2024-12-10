@@ -21,10 +21,14 @@ export default function HomePage() {
       </div>
       <NewArrivals />
       <TopSelling />
+      <div className='py-52 px-8'>
       <CategoryBanner/>
-      <Testimonial />
-    
+      </div>
 
+      
+      <Testimonial />
     </div>
+
+    
   )
 }

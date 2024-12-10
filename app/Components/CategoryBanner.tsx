@@ -1,72 +1,83 @@
-import React from 'react'
+import React from "react";
 import Image from "next/image";
-import { Button } from '@/components/ui/button';
+
+const MyButton = ({ name }: { name: string }) => {
+  return (
+    <p className="font-bold text-[24px] text-white bg-black/50 px-3 py-1 rounded ">
+      {name}
+    </p>
+  );
+};
+
 function CategoryBanner() {
   return (
-    <div className="mx-auto w-full h-auto max-w-7xl py-12">
-   
-    <div className="py-4">
-    <div className="flex flex-col gap-5 py-4">
-        <div className="flex items-center gap-2">
-          <div className="bg-Button2 w-4 h-10 border border-Button2"></div>{" "}
-          <h1 className="font-sm  text-Secondary2">Featured</h1>
+    <div className="flex justify-center items-center w-full h-screen bg-[#F0F0F0] md:rounded-3xl">
+      {/* Main Content */}
+      <div className="w-full max-w-7xl py-12 md:ml-96 px-5">
+        {/* Header Section */}
+        <h1 className="font-bold text-center text-[36px] mb-8">BROWSE BY DRESS CATEGORY</h1>
+
+        {/* Grid Section */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-[30px]">
+          {/* Box 1 */}
+          <div className="relative rounded-2xl w-full h-[300px] overflow-hidden">
+            <Image
+              src={"/images/Cat1.svg"}
+              alt="Casual"
+              layout="fill"
+              objectFit="cover"
+              className="rounded-2xl"
+            />
+            <div className="absolute top-2 left-2 p-2 flex justify-center items-center">
+              <MyButton name={"Casual"} />
+            </div>
+          </div>
+
+          {/* Box 2 */}
+          <div className="relative col-span-2 w-full h-[300px] overflow-hidden">
+            <Image
+              src="/images/Cat2.svg"
+              alt="Formal"
+              layout="fill"
+              objectFit="cover"
+              className="rounded-2xl"
+            />
+            <div className="absolute top-2 left-2 p-2 flex justify-center items-center">
+              <MyButton name={"Formal"} />
+            </div>
+          </div>
+
+          {/* Box 3 */}
+          <div className="relative col-span-2 w-full h-[300px] overflow-hidden">
+            <Image
+              src={"/images/Cat3.svg"}
+              alt="Party"
+              layout="fill"
+              objectFit="cover"
+              className="rounded-2xl"
+            />
+            <div className="absolute top-2 left-2 p-2 flex justify-center items-center">
+              <MyButton name={"Party"} />
+            </div>
+          </div>
+
+          {/* Box 4 */}
+          <div className="relative w-full h-[300px] overflow-hidden">
+            <Image
+              src={"/images/Cat4.svg"}
+              alt="Gym"
+              layout="fill"
+              objectFit="cover"
+              className="rounded-2xl"
+            />
+            <div className="absolute top-2 left-2 p-2 flex justify-center items-center">
+              <MyButton name={"Gym"} />
+            </div>
+          </div>
         </div>
-        
-        <div>
-          <h1 className="font-semibold text-[36px]">New Arrival</h1>
-        </div>
+      </div>
     </div>
-    <div className='grid grid-cols md:grid-cols-4 md:grid-rows-2 gap-[30px]'>
-     <div className='grid col-span-1 row-span-1 bg-black relative'>
-        <div>
-        <Image src={"/images/Category-1.svg"} alt='Box 1' width={511} height={511} 
-        className='flex items-end justify-end'/>
-        </div>
-        <div className='absolute bottom-2 left-2 p-2 space-y-4 text-Primary'>
-            <h1 className='font-semibold text-2xl'>PlayStation 5</h1>
-            <p>Black and White version of the PS5 coming out on sale.</p>
-            <MyButton />
-        </div>
-     </div>
-     <div className='grid col-span-2 row-span-1 bg-black relative'>
-   <Image src="/images/womanHat.png" alt="Box 2" width={432} height={286} 
-   className="justify-self-end"/>
-    <div className='absolute bottom-2 left-2 p-2 space-y-4 text-Primary'>
-        <h1 className='font-semibold text-2xl'>Women's Collections</h1>
-        <p className='text-sm'>Featured woman collections that give you another vibe.</p>
-        <MyButton />
-    </div>
-</div>
-     <div className='grid col-span-2 row-span-1 bg-black relative'>
-     <Image src={"/images/speakers.png"} alt='Box 3' width={210} height={222} className='justify-self-center self-center'/>
-        <div className='absolute bottom-2 left-2 p-2 space-y-4 text-Primary'>
-            <h1 className='font-semibold text-2xl'>Speakers</h1>
-            <p className='text-sm'>Amazon wireless speakers</p>
-            <MyButton  />
-        </div>
-     </div>
-     <div className='grid col-span-1 row-span-1 bg-black relative'>
-     <Image src={"/images/perfumes.png"} alt='Box 4' width={210} height={222} className='justify-self-center self-center'/>
-        <div className='absolute bottom-2 left-2 p-2 space-y-4 text-Primary'>
-            <h1 className='font-semibold text-2xl'>Perfume</h1>
-            <p className='text-sm'>GUCCI INTENSE OUD EDP</p>
-            <MyButton  />
-        </div>
-     </div>
-     </div>
-     
-    </div>
-    
-  </div>
-  )
+  );
 }
 
-export default CategoryBanner
-
-const MyButton = ()=>{
-        return(
-           
-                <Button variant="outline" className='px-5 p-1 bg-transparent'>Shop Now</Button>
-            
-        )
-}
+export default CategoryBanner;

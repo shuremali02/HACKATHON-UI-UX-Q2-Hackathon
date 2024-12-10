@@ -1,7 +1,6 @@
-import React from 'react';
-
+ import React from 'react';
 import Image from 'next/image';
-import { FaFacebookF, FaInstagram,  } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { CiTwitter } from "react-icons/ci";
 import { TiSocialLinkedin } from "react-icons/ti";
 
@@ -11,15 +10,14 @@ export default function Footer() {
   return (
     <footer className="bg-white text-gray-700 py-9">
       {/* Newsletter Section */}
-      <div className="relative grid grid-cols-1 md:grid-cols-2 py-9 md:py-11 px-6 md:px-16 max-w-frame mx-auto bg-black rounded-[20px]">
-        <p className="font-bold text-[32px] md:text-[40px] text-white mb-9 md:mb-0">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 items-center py-9 md:py-11 px-6 md:px-16 max-w-7xl mx-auto bg-black rounded-[20px]">
+        <p className="font-bold text-[24px] md:text-[40px] text-white mb-6 md:mb-0 leading-tight">
           STAY UP TO DATE ABOUT OUR LATEST OFFERS
         </p>
-        <div className="flex items-center">
-          <div className="flex flex-col max-w-[349px] mx-auto">
-            <div className="flex bg-white mb-[14px] rounded-l-md">
+        <div className="flex justify-center md:justify-end items-center">
+          <div className="flex flex-col w-full max-w-md">
+            <div className="flex items-center bg-white px-4 py-2 mb-4 rounded-full shadow-md">
               <Image
-                priority
                 src="/icons/envelope.svg"
                 height={20}
                 width={20}
@@ -30,12 +28,12 @@ export default function Footer() {
                 type="email"
                 name="email"
                 placeholder="Enter your email address"
-                className="bg-transparent placeholder:text-black/40 placeholder:text-sm sm:placeholder:text-base"
+                className="flex-1 bg-transparent placeholder-gray-500 text-sm focus:outline-none"
               />
             </div>
             <Button
               variant="secondary"
-              className="text-sm sm:text-base font-medium bg-white h-12 rounded-full px-4 py-3"
+              className="text-sm font-medium bg-white text-black h-12 rounded-full shadow-md"
               aria-label="Subscribe to Newsletter"
               type="button"
             >
@@ -46,11 +44,19 @@ export default function Footer() {
       </div>
 
       {/* Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 md:px-8 mt-8">
+      <div className="max-w-7xl mx-auto px-6 md:px-16 mt-10">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center md:text-left">
           <div>
-            <h3 className="font-semibold text-lg mb-4">Shop.Co</h3>
-            <p className="text-sm">We have clothes that suit your style and which you&#39;re proud to wear. From women to men.</p>
+            <Image
+              src="/images/SHOP.CO.svg"
+              alt="Logo"
+              width={160}
+              height={22}
+              className="w-[100px] h-auto md:w-[160px] mx-auto md:mx-0"
+            />
+            <p className="text-sm mt-4">
+              We have clothes that suit your style and which you&339;re proud to wear. From women to men.
+            </p>
             <div className="flex justify-center md:justify-start mt-4 space-x-4 text-xl">
               <FaFacebookF />
               <CiTwitter />
@@ -98,8 +104,8 @@ export default function Footer() {
       </div>
 
       {/* Footer Bottom */}
-      <div className="border-t border-gray-700 mt-8 pt-4">
-        <div className="flex items-center justify-between px-4 md:px-8 text-sm">
+      <div className="border-t border-gray-200 mt-8 pt-4">
+        <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 text-sm space-y-4 md:space-y-0">
           <p>Shop.co © 2000-2023, All Rights Reserved</p>
           <div className="flex space-x-4">
             <Image src="/visa.png" alt="Visa" width={36} height={24} />

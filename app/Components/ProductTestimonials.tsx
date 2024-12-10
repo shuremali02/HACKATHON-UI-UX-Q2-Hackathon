@@ -31,17 +31,17 @@ export default function ProductTestimonial() {
       title: "Posted on August 17, 2023",
     },
     {
-        description:
-          "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out.",
-        name: "Olivia P.",
-        title: "Posted on August 17, 2023",
-      },
-      {
-        description:
-          "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out.",
-        name: "Olivia P.",
-        title: "Posted on August 17, 2023",
-      },
+      description:
+        "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out.",
+      name: "Olivia P.",
+      title: "Posted on August 17, 2023",
+    },
+    {
+      description:
+        "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out.",
+      name: "Olivia P.",
+      title: "Posted on August 17, 2023",
+    },
   ];
 
   return (
@@ -67,26 +67,38 @@ export default function ProductTestimonial() {
           </div>
         </div>
 
-        {/* Grid of Testimonials */}
-        <div className="flex items-center py-4 ">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-3 mx-auto max-w-6xl ">
-                    {Test.map((testimonial, index) => (
-                        <TestimonialsCards key={index} {...testimonial} />
-                    ))}
-                </div>
-            </div>
-            
+        {/* Testimonials Section */}
+        <div className="w-full">
+          {/* Horizontal Scroll for Mobile */}
+          <div className="sm:block md:hidden overflow-x-auto whitespace-nowrap space-x-4 text-gray-700 text-sm line-clamp-3 overflow-hidden break-words">
+            {Test.map((testimonial, index) => (
+              <div
+                key={index}
+                className="inline-block w-[280px] flex-shrink-0 mx-2"
+              >
+                <TestimonialsCards {...testimonial} />
+              </div>
+            ))}
+          </div>
 
-
+          {/* Grid for Larger Screens */}
+          <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-3 mx-auto max-w-6xl">
+            {Test.map((testimonial, index) => (
+              <TestimonialsCards key={index} {...testimonial} />
+            ))}
+          </div>
+        </div>
       </div>
-      <div className="flex items-center justify-center">
-<Button className='p-6 px-9 rounded-none bg-transparent text-Button '
->Load More Reviews</Button>
-</div>
-<YouMight/>
 
+      {/* Load More Button */}
+      <div className="flex items-center justify-center mt-8">
+        <Button className="p-6 px-9 rounded-none bg-transparent text-Button">
+          Load More Reviews
+        </Button>
+      </div>
+
+      {/* You Might Also Like Section */}
+      <YouMight />
     </div>
-
   );
 }
-
