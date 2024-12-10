@@ -13,7 +13,7 @@ import CategoryBanner from './Components/CategoryBanner';
 export default function HomePage() {
   return (
     <div>
-
+      {/* hero section */}
       <HeroSecBanner />
 
        <div className="">
