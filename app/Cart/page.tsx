@@ -1,8 +1,22 @@
+import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from "@/components/ui/breadcrumb";
 import Image from "next/image";
 
 export default function Cart() {
     return (
       <div className="max-w-6xl mx-auto px-4 py-8">
+        <div className="p-4 ">
+        <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Cart</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
         <h1 className="text-3xl font-bold mb-8">Your Cart</h1>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Left Section: Cart Items */}

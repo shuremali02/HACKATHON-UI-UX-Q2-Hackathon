@@ -11,7 +11,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="bg-bg flex items-center justify-between h-[64px] px-4 md:px-8 lg:px-16">
+    <div className="bg-bg flex items-center justify-between h-[64px] px-4 md:px-11 lg:px-16">
       {/* Logo and Menu Button */}
       <div className="flex items-center">
         {/* Toggle Button */}
@@ -72,7 +72,7 @@ export default function Header() {
 
         {/* Cart and Profile Icons */}
         <div className="flex items-center gap-4">
-          <ShoppingCart size={24} className="cursor-pointer" />
+         <Link href={"/Cart"}> <ShoppingCart size={24} className="cursor-pointer" /></Link>
           <CgProfile size={24} className="cursor-pointer" />
         </div>
       </div>

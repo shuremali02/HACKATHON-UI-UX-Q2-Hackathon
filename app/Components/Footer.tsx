@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { CiTwitter } from "react-icons/ci";
 import { TiSocialLinkedin } from "react-icons/ti";
+import { HiOutlineMail } from "react-icons/hi";
 
 import { Button } from '@/components/ui/button';
 
@@ -17,13 +18,7 @@ export default function Footer() {
         <div className="flex justify-center md:justify-end items-center">
           <div className="flex flex-col w-full max-w-md">
             <div className="flex items-center bg-white px-4 py-2 mb-4 rounded-full shadow-md">
-              <Image
-                src="/icons/envelope.svg"
-                height={20}
-                width={20}
-                alt="email"
-                className="min-w-5 min-h-5 mr-2"
-              />
+              <HiOutlineMail size={20}/>
               <input
                 type="email"
                 name="email"

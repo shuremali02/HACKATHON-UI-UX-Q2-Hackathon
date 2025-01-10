@@ -1,10 +1,25 @@
-import React from "react";
-import Cards, { ProductCards } from "@/app/Components/Cards";
-import { Button } from "@/components/ui/button";
+"use client"
+import React, { useState } from "react";
+import { FaArrowLeft, FaArrowRight, FaBars } from "react-icons/fa6";
 import SideBar from "../Components/SideBar";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+import { Button } from "@/components/ui/button";
+import Cards, { ProductCards } from "@/app/Components/Cards";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
 
 export default function CategoryPage() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   const Products: ProductCards[] = [
     {
       image: "images/Category-1.svg",
@@ -70,15 +85,52 @@ export default function CategoryPage() {
     },
   ];
 
+
+
   return (
     <div className="flex w-full">
+      {/* Sidebar Toggle Button for Mobile */}
+      <button
+        onClick={toggleSidebar}
+        className="lg:hidden fixed top-4 left-4 z-50 bg-gray-800 text-white p-2 rounded-md"
+      >
+        <FaBars />
+      </button>
+
       {/* Sidebar Section */}
-      <div className="hidden lg:block w-1/4 h-screen">
+      <div
+        className={`fixed lg:static  w-64  h-screen bg-white shadow-md transform lg:translate-x-0 ${
+          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300`}
+      >
         <SideBar />
       </div>
 
+      {/* Overlay for Sidebar on Mobile */}
+      {isSidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black opacity-50 z-40"
+          onClick={toggleSidebar}
+        ></div>
+      )}
+
       {/* Main Content Section */}
-      <div className="flex-1  py-4 space-y-8">
+      <div className="flex-1 py-4 space-y-8 lg:pl-64">
+        {/* Breadcrumb */}
+        <div className="p-4">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Casual</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+
         {/* Header Section */}
         <div className="flex justify-between items-center">
           <h1 className="font-semibold text-4xl">Casual</h1>
@@ -99,7 +151,7 @@ export default function CategoryPage() {
         </div>
 
         {/* Product Grid Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 md: lg:grid-cols-3 gap-6">
           {Products.map((product, index) => (
             <Cards key={index} {...product} />
           ))}
@@ -109,9 +161,9 @@ export default function CategoryPage() {
         <div className="flex justify-between items-center space-x-4">
           <Button className="px-6 py-3 bg-gray-800 text-white rounded-md hover:bg-gray-900 flex items-center">
             <FaArrowLeft className="mr-2" /> Previous
-          </Button>|
-          <div className="text-gray-700 ">1 {""} 2 {""} 3 ... 8 {""} 9 {""} 10</div>
-          |<Button className="px-6 py-3 bg-gray-800 text-white rounded-md hover:bg-gray-900 flex items-center">
+          </Button>
+          <div className="text-gray-700">1 {""} 2 {""} 3 ... 8 {""} 9 {""} 10</div>
+          <Button className="px-6 py-3 bg-gray-800 text-white rounded-md hover:bg-gray-900 flex items-center">
             Next <FaArrowRight className="ml-2" />
           </Button>
         </div>

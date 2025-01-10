@@ -35,7 +35,7 @@ export default function NewArrivals() {
   ];
 
   return (
-    <div className="flex flex-col w-full space-y-4 py-4 pt-11 justify-center">
+    <div className="flex flex-col w-full md:p-12 space-y-4  pt-11 justify-center">
       {/* Section Title */}
       <div>
         <h1 className="font-bold text-5xl text-center">NEW ARRIVALS</h1>

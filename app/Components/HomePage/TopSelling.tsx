@@ -33,7 +33,7 @@ export default function TopSelling() {
   ];
 
   return (
-    <div className="flex flex-col space-y-4 items-center justify-center">
+    <div className="flex flex-col md:p-12 space-y-4 items-center justify-center">
       {/* Section Title */}
       <div>
         <h1 className="font-bold text-5xl">TOP SELLING</h1>

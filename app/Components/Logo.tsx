@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function LogoSec() {
   return (
-    <div className="flex items-center justify-center bg-black py-11 mx-auto">
-      <div className="w-full max-w-[390px] md:max-w-7xl flex flex-wrap items-center justify-center ">
+    <div className="flex  justify-center md:p-12 bg-black  mx-auto">
+      <div className="w-full max-w-[390px] md:max-w-7xl md:gap-28 gap-5 py-4 flex flex-wrap items-center justify-center ">
         {/* Logo container */}
         {[
           { src: "/images/versace.svg", alt: "Versace", width: 130, height: 43 },

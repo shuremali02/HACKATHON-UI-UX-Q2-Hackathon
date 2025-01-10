@@ -16,7 +16,7 @@ export default function HeroSecBanner() {
             designed to bring out your individuality and cater to your sense of style.
           </p>
           <div className="flex justify-center md:justify-start">
-            <Button className="bg-black text-white px-6 py-3 rounded-lg">
+            <Button className="bg-black text-white px-6 py-3 w-full rounded-lg">
               Shop Now
             </Button>
           </div>

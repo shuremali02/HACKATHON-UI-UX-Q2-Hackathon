@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const MyButton = ({ name }: { name: string }) => {
   return (
-    <p className="font-bold text-[24px] text-white bg-black/50 px-3 py-1 rounded ">
+    <p className="font-bold text-[24px] px-3 py-1 rounded ">
       {name}
     </p>
   );
@@ -11,7 +11,7 @@ const MyButton = ({ name }: { name: string }) => {
 
 function CategoryBanner() {
   return (
-    <div className="flex justify-center items-center w-full h-screen bg-[#F0F0F0] md:rounded-3xl">
+    <div className="hidden md:flex justify-center items-center w-full h-screen bg-[#F0F0F0] md:rounded-3xl">
       {/* Main Content */}
       <div className="w-full max-w-7xl py-12 md:ml-96 px-5">
         {/* Header Section */}

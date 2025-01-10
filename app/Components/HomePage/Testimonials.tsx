@@ -19,6 +19,21 @@ export default function Testimonial() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
       name: "Stephen Kerubo",
     },
+    {
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+      name: "Stephen Kerubo",
+    },
+    {
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+      name: "Stephen Kerubo",
+    },
+    {
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+      name: "Stephen Kerubo",
+    },
   ];
 
   return (
@@ -34,7 +49,7 @@ export default function Testimonial() {
           <FaArrowRight size={28} />
         </div>
       </div>
-      <div className="flex items-center py-4">
+      <div className="flex items-center py-4 overflow-x-auto ">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-3 mx-auto max-w-6xl">
           {Test.map((testimonial, index) => (
             <TestimonialsCards key={index} {...testimonial} />

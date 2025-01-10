@@ -21,7 +21,7 @@ export default function HomePage() {
       </div>
       <NewArrivals />
       <TopSelling />
-      <div className='py-52 px-8'>
+      <div className='md:py-52 '>
       <CategoryBanner/>
       </div>
 
