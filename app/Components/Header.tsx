@@ -42,6 +42,7 @@ export default function Header() {
           <option value="Wm">Woman</option>
           <option value="Kd">Kids</option>
         </select>
+        {/* shopPage */}
         <Link href={"/Category"} className="hover:underline">
          Shop
         </Link>
