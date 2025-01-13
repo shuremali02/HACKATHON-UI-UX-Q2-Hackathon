@@ -1,4 +1,4 @@
- import React from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { CiTwitter } from "react-icons/ci";
@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="flex justify-center md:justify-end items-center">
           <div className="flex flex-col w-full max-w-md">
             <div className="flex items-center bg-white px-4 py-2 mb-4 rounded-full shadow-md">
-              <HiOutlineMail size={20}/>
+              <HiOutlineMail size={20} />
               <input
                 type="email"
                 name="email"
@@ -102,10 +102,19 @@ export default function Footer() {
       <div className="border-t border-gray-200 mt-8 pt-4">
         <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 text-sm space-y-4 md:space-y-0">
           <p>Shop.co © 2000-2023, All Rights Reserved</p>
-          <div className="flex space-x-4">
-            <Image src="/visa.png" alt="Visa" width={36} height={24} />
-            <Image src="/paypal.png" alt="PayPal" width={36} height={24} />
-            <Image src="/apple-pay.png" alt="Apple Pay" width={36} height={24} />
+          <div className="flex gap-4">
+            <div className='w-12 h-8'>
+              <Image src="/images/Badge (1).svg" alt="Visa" width={52} height={40} />
+            </div>
+            <div className='w-12 h-8'>
+              <Image src="/images/Badge (2).svg" alt="PayPal" width={52} height={40} />
+            </div>
+            <div className='w-12 h-8'>
+              <Image src="/images/Badge (3).svg" alt="Apple Pay" width={52} height={40} />
+            </div>
+            <div className='w-12 h-8'>
+              <Image src="/images/Badge (4).svg" alt="Apple Pay" width={52} height={40} />
+            </div>
           </div>
         </div>
       </div>

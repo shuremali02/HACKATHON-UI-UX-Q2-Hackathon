@@ -1,7 +1,51 @@
+"use client"
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from "@/components/ui/breadcrumb";
-import Image from "next/image";
+
+import CartItem from "../Components/CartItem";
+const cartItems = [
+  {
+    id: 1,
+    imageSrc: "/images/Category-1.svg",
+    altText: "Gradient Graphic T-shirt",
+    title: "Gradient Graphic T-shirt",
+    size: "Large",
+    color: "White",
+    price: 145,
+    quantity: 1,
+  },
+  {
+    id: 2,
+    imageSrc: "/images/Selling3.svg",
+    altText: "Checkered Shirt",
+    title: "Checkered Shirt",
+    size: "Medium",
+    color: "Red",
+    price: 180,
+    quantity: 1,
+  },
+  {
+    id: 3,
+    imageSrc: "/images/Selling2.svg",
+    altText: "Skinny Fit Jeans",
+    title: "Skinny Fit Jeans",
+    size: "Large",
+    color: "Blue",
+    price: 240,
+    quantity: 1,
+  },
+];
+
 
 export default function Cart() {
+  const handleQuantityChange = (id: number, newQuantity: number) => {
+    alert(`Item ${id} new quantity: ${newQuantity}`);
+    // Update state logic here
+  };
+
+  const handleRemove = (id: number) => {
+    alert(`Item ${id} removed`);
+    // Remove item logic here
+  };
     return (
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="p-4 ">
@@ -20,79 +64,22 @@ export default function Cart() {
         <h1 className="text-3xl font-bold mb-8">Your Cart</h1>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Left Section: Cart Items */}
-          <div className="lg:col-span-2">
-            {/* Item 1 */}
-            <div className="flex items-center justify-between mb-6 p-4 bg-white rounded shadow">
-              <div className="flex items-center space-x-4">
-                <Image
-                  src="/images/Category-1.svg"
-                  alt="Gradient Graphic T-shirt"
-                  height={124}
-                  width={124}
-                  className="w-20 h-20 object-cover rounded"
-                />
-                <div>
-                  <h2 className="font-semibold text-lg">Gradient Graphic T-shirt</h2>
-                  <p className="text-sm text-gray-500">Size: Large | Color: White</p>
-                  <p className="text-md font-bold">$145</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-4">
-                <button className="px-2 bg-gray-200 rounded hover:bg-gray-300">-</button>
-                <span className="font-medium">1</span>
-                <button className="px-2 bg-gray-200 rounded hover:bg-gray-300">+</button>
-                <button className="text-red-500 hover:text-red-700">🗑</button>
-              </div>
-            </div>
-  
-            {/* Item 2 */}
-            <div className="flex items-center justify-between mb-6 p-4 bg-white rounded shadow">
-              <div className="flex items-center space-x-4">
-                <Image
-                  src="/images/Selling3.svg"
-                  alt="Checkered Shirt"
-                  height={124}
-                  width={124}
-                  className="w-20 h-20 object-cover rounded"
-                />
-                <div>
-                  <h2 className="font-semibold text-lg">Checkered Shirt</h2>
-                  <p className="text-sm text-gray-500">Size: Medium | Color: Red</p>
-                  <p className="text-md font-bold">$180</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-4">
-                <button className="px-2 bg-gray-200 rounded hover:bg-gray-300">-</button>
-                <span className="font-medium">1</span>
-                <button className="px-2 bg-gray-200 rounded hover:bg-gray-300">+</button>
-                <button className="text-red-500 hover:text-red-700">🗑</button>
-              </div>
-            </div>
-  
-            {/* Item 3 */}
-            <div className="flex items-center justify-between p-4 bg-white rounded shadow">
-              <div className="flex items-center space-x-4">
-                <Image
-                  src="/images/Selling2.svg"
-                  alt="Skinny Fit Jeans"
-                  height={124}
-                  width={124}
-                  className="w-20 h-20 object-cover rounded"
-                />
-                <div>
-                  <h2 className="font-semibold text-lg">Skinny Fit Jeans</h2>
-                  <p className="text-sm text-gray-500">Size: Large | Color: Blue</p>
-                  <p className="text-md font-bold">$240</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-4">
-                <button className="px-2 bg-gray-200 rounded hover:bg-gray-300">-</button>
-                <span className="font-medium">1</span>
-                <button className="px-2 bg-gray-200 rounded hover:bg-gray-300">+</button>
-                <button className="text-red-500 hover:text-red-700">🗑</button>
-              </div>
-            </div>
-          </div>
+          <div className="lg:col-span-2 rounded-3xl border-2 border-gray-300 py-2">
+      {cartItems.map((item) => (
+        <CartItem
+          key={item.id}
+          imageSrc={item.imageSrc}
+          altText={item.altText}
+          title={item.title}
+          size={item.size}
+          color={item.color}
+          price={item.price}
+          quantity={item.quantity}
+          onQuantityChange={(newQuantity) => handleQuantityChange(item.id, newQuantity)}
+          onRemove={() => handleRemove(item.id)}
+        />
+      ))}
+    </div>
   
           {/* Right Section: Order Summary */}
           <div className="p-6 bg-white rounded shadow">

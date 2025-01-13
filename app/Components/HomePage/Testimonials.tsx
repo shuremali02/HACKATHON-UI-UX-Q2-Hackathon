@@ -56,12 +56,12 @@ export default function Testimonial() {
           ))}
         </div>
       </div>
-      {/* Mobile View Adjustments */}
+      {/* Mobile View Adjustments
       <div className="block sm:hidden">
         {Test.slice(0, 1).map((testimonial, index) => (
           <TestimonialsCards key={index} {...testimonial} />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

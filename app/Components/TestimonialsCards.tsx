@@ -15,7 +15,7 @@ export default function TestimonialsCard({
   
 }: TestimonialsProp) {
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center w-full">
       <div className="w-full max-w-md border border-gray-400 rounded-lg shadow-md p-6">
         {/* Star Ratings */}
         <div className="flex mb-4">
@@ -31,12 +31,12 @@ export default function TestimonialsCard({
         </div>
 
         {/* Description */}
-        <div className="w-full">
-          <p className="text-gray-600 text-sm break-words">
+        <div className="overflow-x-hidden text-gray-600 text-sm break-words text-justify">
+          <p>
             {description}
           </p>
-        </div>
-        <div className="w-full"><p className="text-gray-600 text-sm break-words">
+        
+        <p>
             {description}
           </p></div>
       </div>

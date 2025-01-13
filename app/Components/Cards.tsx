@@ -23,9 +23,9 @@ export default function Cards({
   const Stars = 5;
 
   return (
-    <div className="w-full flex flex-col justify-center items-start  h-[500px] ">
+    <div className="w-full flex flex-col max-w-md justify-center items-start   ">
       {/* Product Image */}
-      <div className="flex items-center h-[350px] justify-center ">
+      <div className="flex items-center justify-center ">
         <Image
           src={image}
           alt={title}
@@ -36,9 +36,11 @@ export default function Cards({
       </div>
 
       {/* Product Details */}
-      <div className="mt-4 ">
+      <div className="mt-3">
         {/* Title */}
-        <h3 className="text-sm font-bold text-gray-800 truncate">{title}</h3>
+        <h3 className="text-sm font-bold text-gray-800 truncate">
+          {title.length > 20? (title.slice(0,20)):(title)}
+        </h3>
 
         {/* Rating */}
         {rating !== undefined && (
