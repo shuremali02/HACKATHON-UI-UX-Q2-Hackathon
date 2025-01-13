@@ -42,11 +42,11 @@ export default function Header() {
           <option value="Wm">Woman</option>
           <option value="Kd">Kids</option>
         </select>
-        <Link href={"#"} className="hover:underline">
-          On Sale
+        <Link href={"/Category"} className="hover:underline">
+         Shop
         </Link>
-        <Link href={"#"} className="hover:underline">
-          New Arrivals
+        <Link href={"/ProductDetails"} className="hover:underline">
+          Product Details
         </Link>
         <Link href={"#"} className="hover:underline">
           Brands
@@ -80,14 +80,14 @@ export default function Header() {
       {/* Mobile Navigation Menu */}
       {menuOpen && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 z-50 flex flex-col items-center justify-center text-white space-y-6">
-          <Link href={"#"} onClick={() => setMenuOpen(false)}>
+          <Link href={"/Category"} onClick={() => setMenuOpen(false)}>
             Shop
           </Link>
           <Link href={"#"} onClick={() => setMenuOpen(false)}>
             On Sale
           </Link>
-          <Link href={"#"} onClick={() => setMenuOpen(false)}>
-            New Arrivals
+          <Link href={"/ProductDetails"} onClick={() => setMenuOpen(false)}>
+           Product Details
           </Link>
           <Link href={"#"} onClick={() => setMenuOpen(false)}>
             Brands
