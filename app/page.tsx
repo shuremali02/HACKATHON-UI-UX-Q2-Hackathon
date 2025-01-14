@@ -7,7 +7,7 @@ import NewArrivals from './Components/HomePage/NewArrivals';
 import TopSelling from './Components/HomePage/TopSelling';
 import Testimonial from './Components/HomePage/Testimonials';
 import LogoSec from './Components/Logo';
-import CategoryBanner from './Components/CategoryBanner';
+// import CategoryBanner from './Components/CategoryBanner';
 
 
 export default function HomePage() {
@@ -21,9 +21,9 @@ export default function HomePage() {
       </div>
       <NewArrivals />
       <TopSelling />
-      <div className='md:py-52 '>
+      {/* <div className='md:py-52 '>
       <CategoryBanner/>
-      </div>
+      </div> */}
 
       
       <Testimonial />

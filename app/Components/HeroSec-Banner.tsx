@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function HeroSecBanner() {
   return (
-    <div className="max-w-[1440px] bg-[#F2F0F1] mx-auto w-full px-5 text-black flex flex-col overflow-hidden">
+    <div className="max-w-[1440px] bg-[#F2F0F1] mx-auto w-full px-5 pt-6 text-black flex flex-col overflow-hidden">
       {/* Main Content */}
       <div className="flex flex-col md:flex-row">
         {/* Left Section: Text Content */}
@@ -15,10 +15,11 @@ export default function HeroSecBanner() {
             Browse through our diverse range of meticulously crafted garments,
             designed to bring out your individuality and cater to your sense of style.
           </p>
-          <div className="flex justify-center md:justify-start">
-            <Button className="bg-black text-white px-6 py-3 w-full rounded-lg">
-              Shop Now
-            </Button>
+          <div className="md:flex w-full justify-center md:justify-start">
+          <Button className="bg-black text-white w-full md:w-auto md:px-6 md:py-3 rounded-lg">
+  Shop Now
+</Button>
+
           </div>
           {/* Statistics Section */}
           <div className="flex justify-around md:justify-start md:space-x-10 mt-6">
