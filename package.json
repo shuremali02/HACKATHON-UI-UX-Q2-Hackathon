@@ -1,5 +1,5 @@
 {
-  "name": "ui-ux-hackathon-q2",
+  "name": "my-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,14 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "import-data": "node Scripts/importSanityData.mjs"
+    "import-data": "node scripts/importSanityData.mjs"
   },
   "dependencies": {
-    "@emotion/react": "^11.13.5",
-    "@emotion/styled": "^11.13.5",
-    "@mui/material": "^6.1.10",
     "@radix-ui/react-label": "^2.1.0",
-    "@radix-ui/react-slot": "^1.1.1",
+    "@radix-ui/react-slot": "^1.1.0",
     "@sanity/client": "^6.24.3",
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.70.0",
@@ -29,7 +26,6 @@
     "react-dom": "^18",
     "react-icons": "^5.4.0",
     "sanity": "^3.70.0",
-    "shadcn": "^2.1.6",
     "styled-components": "^6.1.14",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7"

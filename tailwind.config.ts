@@ -10,9 +10,10 @@ const config: Config = {
   theme: {
   	extend: {
   		colors: {
-			bg:'#ffffff',
-			text:'000000',
-			text1:"",
+			Button:"#23A6F0",
+			Text2:"#252B42",
+			Primary: "#FAFAFA",
+			Text:"#737373",
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -60,9 +61,7 @@ const config: Config = {
   			sm: 'calc(var(--radius) - 4px)'
   		}
   	}
-
   },
   plugins: [require("tailwindcss-animate")],
-  
 };
 export default config;
